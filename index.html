@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — 박가희</title>
+  <style>
+    :root {
+      --text: #1f1f1d;
+      --text-sub: #5f5e5a;
+      --border: #e3e1d9;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Pretendard", -apple-system, "Apple SD Gothic Neo", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    .projects {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    .hero {
+      margin-bottom: 72px;
+    }
+
+    .hero-name {
+      font-size: 15px;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+    }
+
+    .hero-headline {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      word-break: keep-all;
+      margin-bottom: 20px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #185FA5;
+      text-decoration: none;
+    }
+
+    .hero-links a:hover {
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #185FA5;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-contact {
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .project {
+      margin-bottom: 96px;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .project-title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .project-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .badge-award {
+      background: #EEEDFE;
+      color: #3C3489;
+    }
+
+    .badge-stack {
+      background: #E1F5EE;
+      color: #085041;
+    }
+
+    .badge-metric {
+      background: #FAECE7;
+      color: #712B13;
+    }
+
+    .project-lead {
+      font-size: 16px;
+      color: var(--text);
+      margin-bottom: 24px;
+      word-break: keep-all;
+    }
+
+    .project-diagram {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 16px;
+      background: #fdfdfc;
+      margin-bottom: 16px;
+    }
+
+    .project-diagram svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #185FA5;
+      text-decoration: none;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="projects">
+
+    <section class="hero">
+      <p class="hero-name">박가희 · AI 에이전트 백엔드 개발자</p>
+      <p class="hero-headline">API 호출 67% 감소, mAP@0.5 96.9%, 오픈소스 개발자대회 동상 수상 — 프로젝트로 증명한다.</p>
+      <div class="hero-links">
+        <a href="https://github.com/gahui" target="_blank" rel="noopener">GitHub 프로필</a>
+        <a href="#" target="_blank" rel="noopener">이력서 PDF 다운로드</a>
+      </div>
+    </section>
+
+    <!-- ============ Investica ============ -->
+    <section class="project">
+      <div class="project-header">
+        <h2 class="project-title">Investica</h2>
+        <span class="project-badge badge-award">오픈소스 개발자대회 동상</span>
+      </div>
+      <p class="project-lead">
+        디지털 소외계층도 "삼성전자 100주 매수해줘" 한마디로 투자할 수 있는 AI 에이전트 플랫폼을 설계했다.
+        Agentica 기반 에이전트가 사용자 의도를 파악해 KIS API 등 필요한 기능을 자동으로 호출하고,
+        화면 전환까지 처리한다. 제19회 오픈소스 개발자대회 동상을 수상했다.
+      </p>
+      <div class="project-diagram">
+        <svg viewBox="0 0 680 440" role="img" aria-label="Investica 아키텍처 다이어그램" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr-inv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+              orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="#73726c" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </marker>
+          </defs>
+          <line x1="340" y1="76" x2="340" y2="94" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-inv)" />
+          <line x1="340" y1="152" x2="340" y2="170" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-inv)" />
+          <path d="M340 228 L185 264" fill="none" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-inv)" />
+          <path d="M340 228 L495 264" fill="none" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-inv)" />
+          <path d="M185 324 L340 360" fill="none" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-inv)" />
+          <path d="M495 324 L340 360" fill="none" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-inv)" />
+
+          <g>
+            <rect x="200" y="20" width="280" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5" />
+            <text x="340" y="40" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#444441">사용자 자연어 요청</text>
+            <text x="340" y="58" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">"삼성전자
+              100주 매수해줘"</text>
+          </g>
+          <g>
+            <rect x="200" y="96" width="280" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5" />
+            <text x="340" y="116" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#444441">React 클라이언트</text>
+            <text x="340" y="134" text-anchor="middle" dominant-baseline="central" font-size="12"
+              fill="#5F5E5A">Agentica RPC 연결</text>
+          </g>
+          <g>
+            <rect x="170" y="172" width="340" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5" />
+            <text x="340" y="192" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#3C3489">NestJS · Agentica 에이전트</text>
+            <text x="340" y="210" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">의도 파악 ·
+              함수 자동 호출</text>
+          </g>
+          <g>
+            <rect x="60" y="264" width="250" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5" />
+            <text x="185" y="284" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#085041">KIS Open API</text>
+            <text x="185" y="302" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">모의거래 ·
+              시세 조회</text>
+          </g>
+          <g>
+            <rect x="370" y="264" width="250" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5" />
+            <text x="495" y="284" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#085041">리포트 수집 · 요약</text>
+            <text x="495" y="302" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">스크래핑 ·
+              용어 해설</text>
+          </g>
+          <g>
+            <rect x="190" y="360" width="300" height="56" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5" />
+            <text x="340" y="380" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#633806">양방향 UI 응답</text>
+            <text x="340" y="398" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#854F0B">화면 자동
+              전환 · 시각화</text>
+          </g>
+        </svg>
+      </div>
+      <p class="project-links">
+        <a href="https://github.com/investica-aivle/investica" target="_blank" rel="noopener">GitHub에서 보기 →</a>
+      </p>
+    </section>
+
+    <!-- ============ CHOK ============ -->
+    <section class="project">
+      <div class="project-header">
+        <h2 class="project-title">CHOK</h2>
+        <span class="project-badge badge-stack">Spring - FastAPI 연동 설계</span>
+      </div>
+      <p class="project-lead">
+        로그 이상탐지 시스템에서 Spring Boot와 FastAPI 사이의 연동 전체를 설계·구축했다.
+        요청/응답 DTO 계약 정의부터 API 경계, 서비스 레이어, LangGraph 판정 파이프라인 연결까지
+        담당했으며, 비동기 배치 처리로 5분당 최대 500건을 처리한다.
+      </p>
+      <div class="project-diagram">
+        <svg viewBox="0 0 680 480" role="img" aria-label="CHOK 아키텍처 다이어그램" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr-chok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+              orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="#73726c" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </marker>
+          </defs>
+          <line x1="340" y1="76" x2="340" y2="100" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-chok)" />
+          <line x1="340" y1="208" x2="340" y2="220" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-chok)" />
+          <line x1="340" y1="270" x2="340" y2="282" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-chok)" />
+          <line x1="340" y1="356" x2="340" y2="380" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-chok)" />
+
+          <g>
+            <rect x="200" y="20" width="280" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5" />
+            <text x="340" y="40" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#444441">Spring Boot</text>
+            <text x="340" y="58" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">FATAL 1차
+              필터 · 분석 요청</text>
+          </g>
+          <g>
+            <rect x="140" y="106" width="400" height="250" rx="16" fill="#F7F6F1" stroke="#5F5E5A" stroke-width="0.5" />
+            <text x="340" y="128" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#444441">FastAPI AI 백엔드</text>
+            <text x="340" y="146" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">담당
+              영역</text>
+          </g>
+          <g>
+            <rect x="180" y="160" width="320" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5" />
+            <text x="340" y="177" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#085041">app.api · schemas</text>
+            <text x="340" y="194" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">HTTP 경계
+              · DTO 계약</text>
+          </g>
+          <g>
+            <rect x="180" y="222" width="320" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5" />
+            <text x="340" y="239" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#085041">app.services</text>
+            <text x="340" y="256" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">분석 흐름
+              조합 · 배치 처리</text>
+          </g>
+          <g>
+            <rect x="180" y="284" width="320" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5" />
+            <text x="340" y="301" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#085041">LangGraph 에이전트</text>
+            <text x="340" y="318" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">정상/이상
+              판정 · 근거 생성</text>
+          </g>
+          <g>
+            <rect x="200" y="384" width="280" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5" />
+            <text x="340" y="404" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#444441">Spring Boot</text>
+            <text x="340" y="422" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">결과 저장 ·
+              정확도 검증</text>
+          </g>
+        </svg>
+      </div>
+      <p class="project-links">
+        <a href="https://github.com/KT-AX-ICT/chok-ai-backend" target="_blank" rel="noopener">GitHub에서 보기 →</a>
+      </p>
+    </section>
+
+    <!-- ============ CHECKAR (lamp_ai) ============ -->
+    <section class="project">
+      <div class="project-header">
+        <h2 class="project-title">CHECKAR · lamp_ai</h2>
+        <span class="project-badge badge-metric">mAP@0.5 96.9%</span>
+      </div>
+      <p class="project-lead">
+        차량 검사 공정의 전조등·후미등 이미지를 YOLO 추론과 밝기 균일도 분석으로 진단하는
+        Kafka 이벤트 기반 AI 서비스를 구현했다. 단순 점등 판정을 넘어 불균일·핫스팟 등 8가지 세부 진단과
+        심각도별 조치 권장사항을 산출하며, YOLOv8n 기반 탐지 성능 mAP@0.5 96.9%를 달성했다.
+      </p>
+      <div class="project-diagram">
+        <svg viewBox="0 0 680 480" role="img" aria-label="CHECKAR lamp_ai 아키텍처 다이어그램"
+          xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr-lamp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+              orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="#73726c" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </marker>
+          </defs>
+          <line x1="340" y1="76" x2="340" y2="100" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-lamp)" />
+          <line x1="340" y1="208" x2="340" y2="220" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-lamp)" />
+          <line x1="340" y1="270" x2="340" y2="282" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-lamp)" />
+          <path d="M340 356 L220 390" fill="none" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-lamp)" />
+          <path d="M340 356 L460 390" fill="none" stroke="#73726c" stroke-width="1.5" marker-end="url(#arr-lamp)" />
+
+          <g>
+            <rect x="200" y="20" width="280" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5" />
+            <text x="340" y="40" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#444441">Kafka · test-started</text>
+            <text x="340" y="58" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">검사 요청
+              이벤트 수신</text>
+          </g>
+          <g>
+            <rect x="140" y="106" width="400" height="250" rx="16" fill="#F7F6F1" stroke="#5F5E5A" stroke-width="0.5" />
+            <text x="340" y="128" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#444441">lamp_ai</text>
+            <text x="340" y="146" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">FastAPI
+              이벤트 컨슈머</text>
+          </g>
+          <g>
+            <rect x="180" y="160" width="320" height="48" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5" />
+            <text x="340" y="177" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#712B13">YOLO 추론</text>
+            <text x="340" y="194" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">점등 여부
+              탐지 · mAP 96.9%</text>
+          </g>
+          <g>
+            <rect x="180" y="222" width="320" height="48" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5" />
+            <text x="340" y="239" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#712B13">밝기 균일도 분석</text>
+            <text x="340" y="256" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">변동계수 ·
+              공간 분포</text>
+          </g>
+          <g>
+            <rect x="180" y="284" width="320" height="48" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5" />
+            <text x="340" y="301" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#712B13">진단 분류</text>
+            <text x="340" y="318" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">8종 진단 ·
+              심각도 산출</text>
+          </g>
+          <g>
+            <rect x="100" y="390" width="240" height="56" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5" />
+            <text x="220" y="410" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#633806">Kafka · 진단 결과</text>
+            <text x="220" y="428" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#854F0B">진단 완료
+              토픽 발행</text>
+          </g>
+          <g>
+            <rect x="360" y="390" width="200" height="56" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5" />
+            <text x="460" y="410" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"
+              fill="#633806">S3 업로드</text>
+            <text x="460" y="428" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#854F0B">결과 이미지
+              저장</text>
+          </g>
+        </svg>
+      </div>
+      <p class="project-links">
+        <a href="https://github.com/bigproject5/lamp_ai" target="_blank" rel="noopener">GitHub에서 보기 →</a>
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="https://github.com/gahui" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">이력서 PDF</a>
+        <a href="mailto:example@email.com">이메일</a>
+      </div>
+      <p class="footer-contact">2026 박가희 포트폴리오</p>
+    </footer>
+
+  </main>
+</body>
+
+</html>
