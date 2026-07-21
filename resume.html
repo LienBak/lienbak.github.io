@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박가희 이력서</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <style>
+        :root {
+            --ink: #0f172a;
+            --sub: #475569;
+            --faint: #94a3b8;
+            --accent: #2563eb;
+            --accent-deep: #1e40af;
+            --accent-bg: #eff6ff;
+            --accent-soft: #dbeafe;
+            --line: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            color: var(--ink);
+            background: #f1f5f9;
+            font-size: 13px;
+            line-height: 1.55;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: #fff;
+            padding: 14mm 16mm;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .page {
+                margin: 0;
+                width: auto;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            border-bottom: 3px solid var(--ink);
+            padding-bottom: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 16px;
+        }
+
+        .hero-name {
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .hero-role {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent-deep);
+            margin-top: 6px;
+        }
+
+        .hero-tag {
+            font-size: 12.5px;
+            color: var(--sub);
+            margin-top: 12px;
+        }
+
+        .hero-links {
+            text-align: right;
+            font-size: 12px;
+            color: var(--sub);
+            line-height: 1.9;
+            white-space: nowrap;
+        }
+
+        .hero-links b {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .metric {
+            border: 1.5px solid var(--line);
+            border-top: 3px solid var(--accent);
+            border-radius: 8px;
+            padding: 10px 12px;
+        }
+
+        .metric.award {
+            background: var(--accent-bg);
+            border-color: var(--accent);
+        }
+
+        .metric .num {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--ink);
+        }
+
+        .metric.award .num {
+            font-size: 14.5px;
+            line-height: 1.3;
+            color: var(--accent-deep);
+        }
+
+        .metric .lbl {
+            font-size: 11px;
+            color: var(--sub);
+            margin-top: 3px;
+        }
+
+        /* ===== BODY ===== */
+        h2 {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: 0.02em;
+            margin: 22px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid var(--line);
+        }
+
+        h2 .en {
+            color: var(--accent);
+            margin-right: 6px;
+        }
+
+        .intro {
+            font-size: 13px;
+            color: var(--ink);
+        }
+
+        .intro b {
+            color: var(--accent-deep);
+        }
+
+        /* timeline */
+        .tl {
+            display: grid;
+            grid-template-columns: 118px 1fr;
+            row-gap: 4px;
+            font-size: 12.5px;
+        }
+
+        .tl .d {
+            color: var(--faint);
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* stack — 2계층 */
+        .stack-tier {
+            margin-bottom: 14px;
+            padding-left: 11px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .stack-tier.sub {
+            border-left-color: var(--line);
+        }
+
+        .tier-label {
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            color: var(--accent-deep);
+            margin-bottom: 6px;
+        }
+
+        .stack-tier.sub .tier-label {
+            color: var(--sub);
+        }
+
+        .tier-label .note {
+            font-weight: 500;
+            font-size: 10.5px;
+            color: var(--faint);
+            letter-spacing: 0;
+            margin-left: 6px;
+        }
+
+        .stack {
+            display: grid;
+            grid-template-columns: 92px 1fr;
+            row-gap: 5px;
+            font-size: 12.5px;
+        }
+
+        .stack .k {
+            font-weight: 700;
+            color: var(--accent-deep);
+        }
+
+        .stack-tier.sub .stack .k {
+            color: var(--sub);
+        }
+
+        /* project */
+        .prj {
+            margin-bottom: 16px;
+            break-inside: avoid;
+        }
+
+        .prj.lead {
+            border: 1.5px solid var(--accent);
+            border-radius: 10px;
+            padding: 14px 16px 12px;
+            background: #fbfdff;
+            margin-bottom: 20px;
+        }
+
+        .prj-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .prj-title {
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .prj.lead .prj-title {
+            font-size: 15.5px;
+        }
+
+        .prj-title .sub {
+            font-weight: 600;
+            color: var(--sub);
+            font-size: 12.5px;
+        }
+
+        .prj-date {
+            font-size: 11.5px;
+            color: var(--faint);
+            white-space: nowrap;
+        }
+
+        .prj-meta {
+            font-size: 11.5px;
+            color: var(--sub);
+            margin: 3px 0 6px;
+        }
+
+        .prj-meta b {
+            color: var(--accent-deep);
+            font-weight: 700;
+        }
+
+        /* PSR — 문제, 과정, 결과 라벨 */
+        .psr-block {
+            margin: 8px 0;
+            padding-left: 12px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .psr-block .tag {
+            display: inline-block;
+            width: 34px;
+            font-size: 10.5px;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            color: var(--accent);
+            margin-right: 6px;
+            vertical-align: 1px;
+        }
+
+        .psr-block p {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 12.5px;
+        }
+
+        .psr-block b {
+            color: var(--accent-deep);
+        }
+
+        ul.psr {
+            list-style: none;
+        }
+
+        ul.psr li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 5px;
+            font-size: 12.5px;
+        }
+
+        ul.psr li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 6px;
+            height: 6px;
+            border-radius: 2px;
+            background: var(--accent);
+        }
+
+        ul.psr li b {
+            color: var(--accent-deep);
+        }
+
+        /* 기술적 난관, 극복 하이라이트 */
+        .win {
+            background: var(--accent-soft);
+            border-radius: 3px;
+            padding: 0 4px;
+            color: var(--accent-deep);
+            font-weight: 700;
+        }
+
+        .lesson {
+            margin-top: 6px;
+            font-size: 11.5px;
+            color: var(--sub);
+            background: #f8fafc;
+            border-radius: 6px;
+            padding: 6px 9px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .lesson b {
+            color: var(--accent-deep);
+        }
+
+        .footer-note {
+            margin-top: 22px;
+            font-size: 10.5px;
+            color: var(--faint);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <!-- ================= HERO ================= -->
+        <header class="hero">
+            <div class="hero-top">
+                <div>
+                    <div class="hero-name">박가희</div>
+                    <div class="hero-role">AI Engineer</div>
+                </div>
+                <div class="hero-links">
+                    <div><b>GitHub</b> github.com/LienBak</div>
+                    <div><b>Portfolio</b> lienbak.github.io</div>
+                    <div><b>Email</b> gahui22@naver.com</div>
+                </div>
+            </div>
+            <div class="hero-tag">FastAPI, LangGraph 멀티에이전트 파이프라인, API 게이트웨이 설계</div>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="num">67%↓</div>
+                    <div class="lbl">외부 API 호출 감소, 2계층 캐시 설계 (investica)</div>
+                </div>
+                <div class="metric">
+                    <div class="num">30만건 / 분</div>
+                    <div class="lbl">로그 분석 비동기 배치 처리 (CHOK)</div>
+                </div>
+                <div class="metric">
+                    <div class="num">96.9%</div>
+                    <div class="lbl">mAP@0.5 결함 탐지 정확도 (CHECKAR)</div>
+                </div>
+                <div class="metric award">
+                    <div class="num">🏆2025 오픈소스 개발자대회 동상</div>
+                    <div class="lbl">과학기술정보통신부 / NIPA (2025)</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= INTRODUCTION ================= -->
+        <section>
+            <h2><span class="en">INTRODUCTION</span></h2>
+            <p class="intro">
+                LangGraph 멀티에이전트 로그 분석 파이프라인의 <b>FastAPI 백엔드 전 구간 설계 및 구현</b>, 비동기 배치 처리로 6분당 최대 30만건 분석 구조 구축.
+                AI 금융 에이전트 <b>2계층 캐시</b>로 외부 KIS API 호출 <b>67% 감소</b>(2025 한국 오픈소스 개발자대회 동상 수상).
+            </p>
+        </section>
+
+        <!-- ================= PROJECTS ================= -->
+        <section>
+            <h2><span class="en">PROJECTS</span></h2>
+
+            <!-- ===== investica ===== -->
+            <div class="prj lead">
+                <div class="prj-head">
+                    <div class="prj-title">investica <span class="sub">| AI 기반 주식 투자 에이전트 플랫폼</span></div>
+                    <div class="prj-date">2025.07 – 2025.08</div>
+                </div>
+                <div class="prj-meta">
+                    <b>팀장</b> 풀스택 5인, 2025 한국 오픈소스 개발자대회 기업 지정과제(뤼튼테크놀로지스), <b>동상 수상</b><br>
+                    NestJS, Agentica Framework, TypeScript, React, AWS, KIS Open API — 자연어 한 문장으로 주식을 매매, 조회하는 AI 금융
+                    에이전트
+                </div>
+
+                <!-- 문제-과정-결과 : 핵심 성과(67%) -->
+                <div class="psr-block">
+                    <p><span class="tag">문제</span> 대시보드 3개 컴포넌트가 KIS API를 동시에 호출하면서 레이트 리밋 초과와 레이스 컨디션이 반복 발생.</p>
+                    <p><span class="tag">과정</span> <span class="win">서버 Map 캐시(TTL 5초)와 React Query(staleTime 30초)를 겹친
+                            2계층 캐시를 직접 설계</span>하고, 응답 스키마를 공용화해 다른 엔드포인트도 같은 캐시 계층을 재사용하도록 구성.</p>
+                    <p><span class="tag">결과</span> <span class="win">외부 API 호출 67% 감소</span>, 레이트 리밋 초과 소멸. 이후
+                        신규 조회 API에도 무수정으로 확장.</p>
+                    <div class="lesson"><b>배운 점</b> — 캐시는 계층마다 무효화 시점을 다르게 잡아야 정합성이 깨지지 않는다는 걸 부하 재현 테스트로 확인했다.</div>
+                </div>
+
+                <!-- 문제-과정-결과 : 금융 데이터 안전성 -->
+                <div class="psr-block">
+                    <p><span class="tag">문제</span> 유사 함수(getPortfolioData 등)를 잘못 고르면 엉뚱한 금융 데이터가 사용자에게 노출될 위험.</p>
+                    <p><span class="tag">과정</span> 배포 전 함수 선택 정확도를 자동으로 측정하는 <b>벤치마크 프레임워크</b>를 만들어 CI 게이트로 편입.</p>
+                    <p><span class="tag">결과</span> 함수 오선택을 배포 전에 정량 수치로 걸러내는 검증 절차 확보.</p>
+                </div>
+
+                <ul class="psr">
+                    <li>AI 함수 실행 완료를 폴링으로만 알 수 있던 구조를, <b>IAgenticaRpcListener 실행 이벤트 리스너</b>로 바꿔 폴링을 없애고 응답 즉시 화면이 전환됨.
+                    </li>
+                    <li>대회 라이선스 검증(auditoss.kr)에서 AGPL-3.0 의존성 충돌을 발견, 원인이 된 webpack 설정을 걷어내어 검증 통과.</li>
+                </ul>
+            </div>
+
+            <!-- ===== CHOK ===== -->
+            <div class="prj">
+                <div class="prj-head">
+                    <div class="prj-title">CHOK <span class="sub">| LangGraph 멀티에이전트 시스템 로그(BGL) 이상탐지 플랫폼</span></div>
+                    <div class="prj-date">2026.06 – 현재</div>
+                </div>
+                <div class="prj-meta">
+                    6인 팀, KT 그룹 AX 과정, <b>담당: FastAPI AI 백엔드 전 구간</b> (API, 스키마, 서비스 레이어, LangGraph 연결) 및 Spring–FastAPI
+                    DTO 계약 설계<br>
+                    FastAPI, LangGraph, Spring Boot, MySQL, ChromaDB — Detection → Diagnosis → Action Advisor → Report
+                    4단계 자동화
+                </div>
+                <ul class="psr">
+                    <li>운영(Spring Boot)과 AI 판정(LangGraph)을 직접 연동하면 파이프라인을 바꿀 때마다 운영 코드까지 손봐야 하는 문제 →
+                        FastAPI 중간 계층과 <b>명시적 DTO 계약</b> 설계 → AI 파이프라인 교체 시 운영 시스템 무변경 구조 확보</li>
+                    <li>대량 로그의 실시간 근접 처리 요구 → <b>비동기 배치 처리 구조</b> 설계 → 6분당 최대 30만건 분석 처리</li>
+                    <li>이진 판정만으로는 운영자가 조치 여부를 판단할 근거 부족 → MySQL과 ChromaDB 기반 <b>RAG로 유사 장애 이력을 함께 제시</b></li>
+                    <li>데모 배포 전 Playwright E2E 테스트 23케이스 실행 검증, 실패 케이스(TC-020) 원인 분석 → <b>locator strict mode 충돌 확인 및
+                            수정</b> → 수정 후 전체 23케이스 통과로 파이프라인 안정성 확보</li>
+                    <li>(고도화 진행중) 로그, 메트릭, 트레이스 트리거 기반 <b>RCA 멀티에이전트 아키텍처</b> 설계</li>
+                </ul>
+            </div>
+
+            <!-- ===== CHECKAR ===== -->
+            <div class="prj">
+                <div class="prj-head">
+                    <div class="prj-title">CHECKAR <span class="sub">| YOLOv8n 기반 차량 램프 결함 탐지 시스템</span></div>
+                    <div class="prj-date">2025.08 – 2025.09</div>
+                </div>
+                <div class="prj-meta">
+                    7인 팀, KT AIVLE School, YOLOv8n, FastAPI, Kafka, Docker, AWS S3 — 전조등과 후미등 8종의 세부 진단 및 심각도 자동 분류
+                </div>
+                <ul class="psr">
+                    <li>테일라이트 가로 띠 형상이 결함 패턴(DIM_PARTIAL)과 혼동돼 오탐 발생 → 혼동행렬 분석으로 원인 규명, 어노테이션 선택 정제 및 증강 재구성 →
+                        <b>mAP@0.5 96.9%</b> 달성
+                    </li>
+                    <li>공개 데이터셋이 없는 도메인이라 팀원들과 직접 촬영한 원본에 Roboflow 증강을 더해 <b>총 6,904장 데이터셋 구축</b>, 8종 클래스 정의와 라벨링 기준 설계
+                    </li>
+                    <li>검사 요청과 결과의 비동기 처리 필요 → <b>Kafka 이벤트 컨슈머 파이프라인</b> 구현 (수신→추론→진단→결과 발행→S3 저장) → 검사 시스템과 AI 서비스 느슨한
+                        결합</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================= STACK : 2계층 ================= -->
+        <section>
+            <h2><span class="en">TECH STACK</span></h2>
+
+            <div class="stack-tier">
+                <div class="tier-label">핵심 스택 <span class="note">직접 설계하고 구현한 주력 기술</span></div>
+                <div class="stack">
+                    <span class="k">AI/에이전트</span><span>LangGraph, Agentica Framework, Function Calling</span>
+                    <span class="k">백엔드</span><span>Python, FastAPI, NestJS(TypeScript)</span>
+                </div>
+            </div>
+
+            <div class="stack-tier sub">
+                <div class="tier-label">경험한 기술 <span class="note">프로젝트에서 협업하며 연동해본 기술</span></div>
+                <div class="stack">
+                    <span class="k">데이터</span><span>MySQL</span>
+                    <span class="k">인프라</span><span>Docker, AWS(EC2, S3), Git</span>
+                    <span class="k">연동</span><span>Spring Boot</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= AWARDS ================= -->
+        <section>
+            <h2><span class="en">AWARDS</span></h2>
+            <div class="tl">
+                <span class="d">2025.12</span><span>2025 한국 오픈소스 개발자대회 <b>동상</b> — 기업 지정과제(뤼튼테크놀로지스), 주최 과학기술정보통신부 /
+                    NIPA</span>
+            </div>
+        </section>
+
+        <!-- ================= EDUCATION & CAREER (간단) ================= -->
+        <section>
+            <h2><span class="en">BACKGROUND</span></h2>
+            <div class="tl">
+                <span class="d">2026.06 – 현재</span><span>KT 그룹 AX 전략 기획 및 멀티에이전트 서비스 개발 과정</span>
+                <span class="d">2025.09</span><span>KT | AIVLE School 7기 AI트랙 수료</span>
+                <span class="d">2019.05 – 2019.06</span><span>GTplus | BI Engineer</span>
+                <span class="d">2019.02</span><span>경기대학교 화학과 졸업</span>
+                <span class="d">2018.09 - 2019.03</span><span>비트교육센터 | Java 기반 빅데이터 분석을 위한 고급인력 양성과정</span>
+                <span class="d">2015.08 – 2018.06</span><span>쿠팡 주식회사 | Catalog Operation</span>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
