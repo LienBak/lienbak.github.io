@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박가희 · AI 백엔드 개발자 이력서</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff;
+  --bg:#eef1f5;
+  --ink:#101828;
+  --body:#344054;
+  --muted:#667085;
+  --line:#d0d5dd;
+  --soft:#f6f8fb;
+  --accent:#173f78;
+  --accent-2:#2f6fab;
+  --sans:'Pretendard','Pretendard Variable',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14.5px;line-height:1.68;letter-spacing:-.012em;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+.page{max-width:980px;margin:26px auto;background:var(--paper);padding:58px 66px 70px;box-shadow:0 10px 34px rgba(16,24,40,.08)}
+.hd{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end;padding-bottom:25px;border-bottom:3px solid var(--ink)}
+.hd-top{display:contents}.hd h1{font-size:40px;font-weight:850;letter-spacing:-.055em;line-height:1}
+.role{margin-top:12px;font-size:17px;font-weight:750;color:var(--accent);letter-spacing:-.025em}
+.badge{align-self:start;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;color:var(--accent);border:1px solid #a9bdd8;background:#f7faff;padding:7px 10px;white-space:nowrap}
+.contact{grid-column:1/-1;margin-top:14px;font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:5px 12px}.contact i{font-style:normal;color:#c6ccd4}
+.sec{margin-top:34px;padding-top:30px;border-top:2px solid var(--ink)}
+.sec:first-of-type{margin-top:30px}
+.sec>h2{display:flex;align-items:baseline;gap:10px;margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid var(--line);font-size:10.5px;font-family:var(--mono);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);line-height:1.4}
+.sec>h2 em{font-style:normal;font-family:var(--sans);font-size:18px;letter-spacing:-.03em;text-transform:none;color:var(--ink);font-weight:850}
+.sec>h2 span{margin-left:auto;font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
+.sec>h2::before{content:none}
+.sec>*:not(h2){grid-column:auto}
+.summary-box{padding:20px 22px;background:#f8fafc;border:1px solid #dbe2ea}.summary-title{margin:0 0 16px;font-size:18px;line-height:1.5;letter-spacing:-.025em;color:var(--ink);font-weight:850}.summary-list{display:grid;gap:14px;list-style:none}.summary-list li{position:relative;padding-left:17px;font-size:14.5px;color:var(--body);line-height:1.65}.summary-list li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border:1.5px solid var(--accent);border-radius:50%}.summary-list strong{display:block;margin-bottom:2px;color:var(--ink);font-size:15px;font-weight:850}
+.summary::after{content:"Python · FastAPI · NestJS · LangGraph · SQL · Docker · AWS · Jira";display:block;margin-top:12px;padding:10px 14px;background:#fff;border:1px solid #dbe2ea;border-left:4px solid var(--accent);font-family:var(--mono);font-size:11.5px;color:#3f4f63;letter-spacing:.015em}
+.highlight-grid{display:none!important}
+.entry{margin-bottom:18px;padding:20px 22px;border:1px solid #dfe5ec;background:#fff}.entry:last-child{margin-bottom:0}.entry + .entry{margin-top:18px}
+.entry-hd{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:20px;align-items:baseline;margin-bottom:6px}
+.entry-hd h3{font-size:18px;font-weight:850;letter-spacing:-.03em}.entry-hd .org{grid-column:1;font-size:13px;color:var(--accent);font-weight:700;margin-top:2px}.entry-hd .mine{grid-column:1/-1;font-size:13px;color:var(--accent);font-weight:750;margin-top:5px}.entry-hd .date{grid-column:2;grid-row:1;font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+.entry-sub{font-size:13.5px;color:var(--muted);margin-bottom:13px}
+ul.b{list-style:none;display:grid;gap:9px}ul.b li{position:relative;padding-left:17px;font-size:14.2px;color:var(--body);line-height:1.68}ul.b li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border:1.5px solid var(--accent);border-radius:50%}ul.b li:has(.lab){display:grid;grid-template-columns:136px minmax(0,1fr);column-gap:14px;align-items:start}ul.b li strong{color:var(--ink);font-weight:800}ul.b li .lab{display:block;min-width:0;font-size:12.3px;font-weight:800;color:var(--accent);margin:0;padding-top:1px}ul.b li .desc{min-width:0}
+.project-detail{display:grid;grid-template-columns:136px minmax(0,1fr);column-gap:14px;align-items:start;margin-top:10px}.project-detail+.project-detail{margin-top:12px}.project-label{font-size:12.3px;font-weight:800;color:var(--accent);padding-top:2px}.project-detail ul{list-style:none;display:grid;gap:7px}.project-detail li{position:relative;padding-left:16px;font-size:14.2px;color:var(--body);line-height:1.68}.project-detail li::before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border:1.5px solid var(--accent);border-radius:50%}.project-detail p{font-size:14.2px;color:var(--body);line-height:1.68}.project-detail strong{color:var(--ink);font-weight:800}.insight{margin-top:13px;padding:11px 14px;background:#f7faff;border:1px solid #d9e3f0;font-size:13px;color:#27496d;line-height:1.65}.insight b{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;margin-right:9px;color:var(--accent)}
+.stack{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}.stack span{font-size:11.5px;color:#344054;background:var(--soft);border:1px solid #e1e6ed;padding:4px 8px;border-radius:999px}.stack .h{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:none;border:none;padding:5px 2px 3px 0}
+.row2{display:grid;grid-template-columns:185px 1fr;gap:0;font-size:14.2px;border:1px solid #dfe5ec}.row2 dt{font-weight:850;color:var(--ink);letter-spacing:-.02em;background:#f7f9fc;padding:14px 16px;border-bottom:1px solid #e4e8ee}.row2 dd{color:var(--body);padding:14px 16px;border-bottom:1px solid #e4e8ee}.row2 dt:nth-last-of-type(1),.row2 dd:last-child{border-bottom:none}.row2 dd .d{font-family:var(--mono);font-size:10.8px;color:var(--muted);margin-left:8px}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13.6px;border:1px solid #e2e7ed}th,td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid #e8ecf1}thead th{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--soft)}tbody tr:last-child td{border-bottom:none}td.cat{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--accent);font-weight:800;white-space:nowrap;width:1%;background:#fafbfd}td.name{font-weight:800;width:28%;letter-spacing:-.02em}td.ev{color:var(--body);font-size:13px}tr.grp td{border-top:2px solid #d9e1ea}
+.note{font-size:12px;color:var(--muted);margin-top:12px}
+@media(max-width:760px){.page{margin:0;padding:34px 22px 44px;box-shadow:none}ul.b li:has(.lab){grid-template-columns:108px minmax(0,1fr);column-gap:10px}.project-detail{grid-template-columns:108px minmax(0,1fr);column-gap:10px}.hd{display:block}.badge{display:inline-block;margin-top:13px}.contact{margin-top:15px}.sec{margin-top:30px;padding-top:24px}.sec>h2{display:block}.sec>h2 em{display:block;margin-top:4px}.sec>h2 span{display:block;margin:6px 0 0}.entry-hd{display:block}.entry-hd .date{display:block;margin-top:4px}.row2{grid-template-columns:1fr}.row2 dt{border-bottom:none;padding-bottom:4px}.row2 dd{padding-top:4px}td.name{width:auto}}
+@media print{body{background:#fff}.page{max-width:none;margin:0;padding:0;box-shadow:none}.entry,.sec{page-break-inside:avoid}tr{page-break-inside:avoid}a{color:inherit}}
+</style>
+</head>
+<body><div class="page">
+<header class="hd">
+  <div class="hd-top"><div><h1>박가희</h1><div class="role">AI Backend Developer</div></div><div class="badge">BACKEND · AI · DATA</div></div>
+  <div class="contact"><span>github.com/LienBak</span><i>|</i><span>lienbak.github.io</span><i>|</i><span>Email gahui22@naver.com</span><i>|</i><span>Phone 010-4232-6952</span></div>
+</header>
+
+<section class="sec summary">
+  <h2>Summary <em>소개</em></h2>
+  <div class="summary-box">
+    <p class="summary-title">운영 이슈를 추적하던 엔지니어에서, AI 시스템을 설계하는 백엔드 개발자로</p>
+    <ul class="summary-list">
+      <li><strong>대규모 데이터 이슈 분석</strong>SQL과 로그를 기반으로 상품 데이터 오류와 시스템 장애 원인을 추적하고 해결했습니다.</li>
+      <li><strong>AI 백엔드 및 멀티에이전트 구현</strong>FastAPI 비동기 처리 구조와 NestJS API 인터페이스를 설계해 AI 서비스의 실행 흐름을 안정화했습니다.</li>
+      <li><strong>기획과 개발을 연결하는 엔지니어</strong>재현 조건과 영향 범위를 명확히 정의하고, 팀 간 협업 과정에서 해결 기준을 정리해 프로젝트를 리드했습니다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Experience <em>업무 경력</em> <span>총 3년 1개월</span></h2>
+  <div class="entry">
+    <div class="entry-hd"><h3>쿠팡 주식회사</h3><span class="org">Catalog Operation · 정규직</span><span class="date">2015.08 – 2018.06</span></div>
+    <div class="entry-sub">파견계약직 → 본사 계약직 → 본사 정규직 전환 · 대규모 카탈로그 데이터 품질 관리 및 시스템 이슈 분석</div>
+    <ul class="b">
+      <li><span class="lab">문제</span><span class="desc">고객 노출 단계에서 상품·이미지 오류가 반복됐지만 운영 화면만으로는 원인과 영향 범위를 빠르게 구분하기 어려웠습니다.</span></li>
+      <li><span class="lab">분석</span><span class="desc">SQL·로그·Admin Tool로 이슈를 재현하고, 재현 조건·영향 범위·샘플 데이터를 정리해 <strong>Root Cause를 추적</strong>했습니다.</span></li>
+      <li><span class="lab">개선</span><span class="desc">대표이미지 수정과 셀러 수정의 충돌로 이미지가 원복되는 원인을 분석하고, <strong>대표이미지 처리 기준·삭제 상품 분리·리컨실리에이션 프로세스</strong>를 재정비했습니다.</span></li>
+      <li><span class="lab">협업</span><span class="desc">분석 근거를 Jira 티켓과 Wiki·플로우차트로 구조화하고, 운영과 개발 조직을 연결하며 프론트엔드·백엔드 개발팀과 해결 상태를 추적했습니다.</span></li>
+      <li><span class="lab">운영</span><span class="desc">약 49만 건 상품 매핑·146만 건 필터 공정을 운영하고, 최대 200명 규모 오퍼레이터의 기준 교육과 오류 피드백 루프를 관리했습니다.</span></li>
+      <li><span class="lab">결과</span><span class="desc">전사 카테고리 리뉴얼을 ETA 내 완료하고, 패션 카테고리 <strong>오류율 2% 미만</strong>, 필터 일일 달성률 <strong>최대 180%</strong>를 유지했습니다.</span></li>
+    </ul>
+    <div class="stack"><span class="h">Skills</span><span>SQL</span><span>Log Analysis</span><span>Jira</span><span>Slack</span><span>Root Cause Analysis</span><span>System Operation</span><span>Data Migration</span><span>Wiki</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-hd"><h3>GTPlus</h3><span class="org">BI Engineer · 사원</span><span class="date">2019.05 – 2019.06</span></div>
+    <div class="entry-sub">Qlik 기반 BI 대시보드 운영 및 파트너사 교육 지원</div>
+    <ul class="b"><li>온프레미스 환경에서 Qlik 데이터 시각화 도구 운영과 써드파티 연동을 지원했습니다.</li><li>파트너사 대상 데이터 시각화 및 분석 도구 활용 교육을 보조했습니다.</li></ul>
+    <div class="stack"><span class="h">Skills</span><span>Qlik</span><span>BI Dashboard</span><span>Data Visualization</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Education <em>학력 · 교육</em> <span>최신순</span></h2>
+  <dl class="row2">
+    <dt>KT · 서울시</dt><dd><strong>청년취업사관학교 AX 개발자 과정</strong> <span class="d">2026.05 – 2026.07</span><br>FastAPI Gateway 개발, Multi-Agent 구조와 서비스 간 인터페이스 설계, Spring Boot 연동 API 인터페이스 설계, LLMOps·LLM-as-a-Judge 학습<br><span class="d">대표 프로젝트 CHOK — FastAPI 분석 서버 및 Multi-Agent 연동 구조 구현</span><div class="stack"><span class="h">Skills</span><span>FastAPI</span><span>LangGraph</span><span>Multi-Agent</span><span>LLMOps</span><span>Spring Boot</span></div></dd>
+    <dt>KT AIVLE School</dt><dd><strong>7기 AI 개발자 트랙</strong> <span class="d">2025.03 – 2025.09</span><br>Python 데이터 처리, PyTorch·YOLO 기반 비전 AI, AWS·Kubernetes 인프라, GitHub PR 협업<br><span class="d">대표 프로젝트 CHECKAR · investica / 오픈소스 개발자대회 동상</span><div class="stack"><span class="h">Skills</span><span>Python</span><span>Pandas</span><span>PyTorch</span><span>YOLO</span><span>AWS</span><span>Kubernetes</span></div></dd>
+    <dt>비트교육센터</dt><dd><strong>Java 기반 빅데이터 분석 고급인력 양성과정</strong> <span class="d">2018.09 – 2019.03</span><br>Java Web, 서버 프로그램·인터페이스 구현, DBMS, JUnit·TDD, UML, Linux 배포를 포함한 960시간 과정<div class="stack"><span class="h">Skills</span><span>Java</span><span>Java Web</span><span>DBMS</span><span>JUnit</span><span>TDD</span><span>Linux</span></div></dd>
+    <dt>경기대학교</dt><dd>화학과 학사 졸업 <span class="d">2013.03 – 2019.02</span><br>쿠팡 재직과 학업 병행</dd>
+      </dl>
+</section>
+
+<section class="sec">
+  <h2>Projects <em>개발 프로젝트</em> <span>백엔드·AI 역량 중심</span></h2>
+  <div class="entry">
+    <div class="entry-hd"><h3>CHOK · 시스템 로그 이상탐지 및 원인 분석 플랫폼</h3><span class="mine">FastAPI 분석 서버 오너 · Agent I/O 계약 및 RCA 오케스트레이터 설계</span><span class="date">2026.06 – 2026.07</span></div>
+    <div class="entry-sub">운영 로그를 분석해 장애 원인과 조치안을 생성하는 AI 서비스</div>
+    <div class="project-detail"><div class="project-label">핵심 기여</div><p>FastAPI 분석 서버 구조를 설계하고, Spring Boot–FastAPI–Agent 간 인터페이스와 Multi-Agent 실행 흐름을 주도했습니다.</p></div>
+    <div class="project-detail"><div class="project-label">프로젝트 구현</div><ul>
+      <li><strong>Pydantic DTO 기반 API 계약</strong>을 정의해 각 서버가 독립적으로 개발될 수 있는 기준을 마련했습니다.</li>
+      <li>log·metric·trace Agent를 <code>asyncio.gather</code>로 병렬 실행하고 결과를 취합하는 <strong>RCA 오케스트레이터</strong>를 구현했습니다.</li>
+      <li>생성자 주입을 적용해 Stub Agent와 실제 LLM Agent를 동일한 인터페이스로 교체할 수 있게 설계했습니다.</li>
+    </ul></div>
+    <div class="project-detail"><div class="project-label">결과</div><p>ruff 위반 60건을 정리하고, 132개 테스트와 Playwright E2E 23개 케이스를 통과시켰습니다.</p></div>
+    <div class="stack"><span class="h">Skills</span><span>FastAPI</span><span>Pydantic</span><span>asyncio</span><span>LangGraph</span><span>pytest</span><span>Playwright</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-hd"><h3>investica · 대화형 AI 주식 투자 서비스</h3><span class="mine">5인 팀장 · 서비스 기획 및 포트폴리오 조회 캐시 구조 담당</span><span class="date">2025.07 – 2025.12</span></div>
+    <div class="entry-sub">디지털 취약 계층의 금융 정보 접근을 돕는 Agentica 기반 서비스</div>
+    <div class="project-detail"><div class="project-label">핵심 기여</div><p>서비스 방향성과 Agentica 기반 구조를 제안하고, 포트폴리오 조회 영역의 서버·클라이언트 캐시를 단독 설계했습니다.</p></div>
+    <div class="project-detail"><div class="project-label">프로젝트 구현</div><ul>
+      <li>NestJS Map 캐시(TTL 5초)와 React Query(staleTime 30초)를 결합한 <strong>2계층 캐시</strong>를 구현했습니다.</li>
+      <li>세 화면에서 반복되던 한국투자증권 잔고 API 호출을 계좌 단위 공통 캐시 키로 통합했습니다.</li>
+      <li>로그 내 계좌번호를 정규식으로 마스킹하고, AGPL 의존성 이슈가 있는 구성을 제거했습니다.</li>
+    </ul></div>
+    <div class="project-detail"><div class="project-label">결과</div><p>불필요한 재요청과 외부 API 쿼터 소진 위험을 줄였으며, 오픈소스 개발자대회 기업 지정과제 동상을 수상했습니다.</p></div>
+    <div class="insight"><b>Award</b>2025 한국 오픈소스 개발자대회 기업 지정과제 동상 · 과학기술정보통신부 / NIPA</div>
+    <div class="stack"><span class="h">Skills</span><span>NestJS</span><span>Agentica</span><span>TypeScript</span><span>React Query</span><span>KIS Open API</span><span>AWS</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-hd"><h3>CHECKAR · 차량 램프 결함 탐지 플랫폼</h3><span class="mine">모델 학습 · 결함 진단 규칙 · 백엔드 이벤트 파이프라인 담당</span><span class="date">2025.07 – 2025.09</span></div>
+    <div class="entry-sub">YOLO 객체 탐지와 밝기 통계 기반 진단을 결합한 제조 검사 서비스</div>
+    <div class="project-detail"><div class="project-label">핵심 기여</div><p>YOLO 모델 학습부터 ROI 기반 결함 판정, 검사 결과 발행까지 AI 진단 흐름을 구현했습니다.</p></div>
+    <div class="project-detail"><div class="project-label">프로젝트 구현</div><ul>
+      <li>차량 램프 이미지 약 7,000장을 직접 어노테이션하고 YOLOv8n을 학습해 <strong>mAP@0.5 96.9%</strong>를 달성했습니다.</li>
+      <li>탐지 ROI에 평균·표준편차·변동계수·백분위수 기반 규칙을 적용해 <strong>8종 결함 판정 로직</strong>을 구현했습니다.</li>
+      <li>Spring Boot와 Kafka로 검사 요청–추론–진단–결과 발행–S3 저장 파이프라인을 연결했습니다.</li>
+    </ul></div>
+    <div class="project-detail"><div class="project-label">결과</div><p>AI 진단 로직과 비동기 이벤트 흐름을 통합하고, AWS EKS·S3·RDS 환경의 배포 구성에 참여했습니다.</p></div>
+    <div class="stack"><span class="h">Skills</span><span>YOLOv8n</span><span>Spring Boot</span><span>Kafka</span><span>FastAPI</span><span>AWS S3</span><span>Roboflow</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Skills <em>기술 역량</em> <span>활용 근거 중심</span></h2>
+  <table><thead><tr><th>구분</th><th>기술</th><th>활용 경험</th></tr></thead><tbody>
+    <tr><td class="cat" rowspan="4">Backend</td><td class="name">Python · FastAPI</td><td class="ev">CHOK API·스키마·서비스 레이어 및 LangGraph 연동 전 구간 구현</td></tr>
+    <tr><td class="name">NestJS · TypeScript</td><td class="ev">investica 백엔드 아키텍처, KIS API 연동, 캐시 계층 설계</td></tr>
+    <tr><td class="name">API Interface · DTO</td><td class="ev">Spring Boot–FastAPI–LangGraph 3단 연동의 요청·응답 인터페이스 설계</td></tr>
+    <tr><td class="name">Async Processing</td><td class="ev">비동기 로그 배치, Kafka 이벤트 컨슈머 파이프라인 구현</td></tr>
+    <tr class="grp"><td class="cat" rowspan="3">AI · Data</td><td class="name">LangGraph · Agentica · AI Orchestration</td><td class="ev">Multi-Agent 분석 파이프라인 및 Function Calling 기반 금융 에이전트</td></tr>
+    <tr><td class="name">YOLOv8n</td><td class="ev">7,000장 데이터셋 구축, mAP@0.5 96.9% 달성</td></tr>
+    <tr><td class="name">MySQL · ChromaDB · SQL</td><td class="ev">RAG 근거 저장·검색, 운영 데이터 조회 및 이슈 원인 분석</td></tr>
+    <tr class="grp"><td class="cat" rowspan="2">Infra · QA</td><td class="name">Docker · AWS · Kubernetes</td><td class="ev">AI 추론 서비스 컨테이너화, EKS·S3·RDS 기반 배포 및 저장</td></tr>
+    <tr><td class="name">pytest · Playwright · ruff</td><td class="ev">비동기 테스트 환경 구성, E2E 23개 검증, 린트 오류 정비</td></tr>
+    <tr class="grp"><td class="cat">Collaboration</td><td class="name">Jira · GitHub · Wiki</td><td class="ev">운영 이슈 재현 및 개발팀 협업, PR 기반 개발, 시스템 원리와 인터페이스 문서화</td></tr>
+  </tbody></table>
+</section>
+
+<section class="sec"><h2>Awards <em>수상</em></h2><dl class="row2"><dt>2025 오픈소스 개발자대회</dt><dd><strong>기업 지정과제 동상 · 뤼튼테크놀로지스 대표상</strong> <span class="d">2025.12</span><br><strong>investica</strong> — 디지털 취약 계층을 위한 Agentica 기반 대화형 주식 정보·거래 서비스<br>5인 팀장으로 서비스 기획을 리드하고 NestJS 캐시 계층과 포트폴리오 기능을 구현<br><span class="d">Agentica · NestJS · TypeScript · React Query · 한국투자증권 Open API · AWS</span></dd></dl><p class="note"></p></section>
+</div></body></html>
